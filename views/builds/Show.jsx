@@ -14,9 +14,9 @@ class Show extends React.Component {
                   </h1>
                   <br />
                   <h2>
-                    {build.motherboard} <br />
-                    {build.processor} <br />
-                    {build.graphicsCard} <br />
+                    Motherboard: {build.motherboard} <br />
+                    Processor: {build.processor} <br />
+                    Graphics Card: {build.graphicsCard} <br />
                   </h2>
                   <p>{build.upToDate ? 'This build is up-to-date' : 'This build is outdated'}</p>
 
@@ -24,7 +24,7 @@ class Show extends React.Component {
 
                   <form action={`/builds/${ build._id }?_method=DELETE`} method="POST">
                     <input type="submit" value="Delete" />
-                    
+
                   </form>
                 </article>
               </div>
