@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 // PC Build Schema
 
-const pcBuildsSchema = new Schema({
+const buildSchema = new Schema({
     userId: String,
     buildName: String,
     motherboard: String,
@@ -13,6 +13,6 @@ const pcBuildsSchema = new Schema({
 
 // PC Builder model
 
-const PcBuild = model("PcBuild", pcBuildsSchema);
+const Build = model("Build", buildSchema);
 
-module.exports = PcBuild;
+module.exports = Build;

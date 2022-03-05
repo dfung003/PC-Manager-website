@@ -34,15 +34,8 @@ mongoose.connection
     .on("error", (error) => console.log(error));
 
 /////////////////////////////////////////////
-// Models
+// Models (moved to models folder)
 /////////////////////////////////////////////
-
-// pull schema and model from mongoose using object destructuring
-
-
-
-// User model
-
 
 
 /////////////////////////////////////////////////
