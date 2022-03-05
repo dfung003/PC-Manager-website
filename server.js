@@ -9,6 +9,7 @@ const express = require("express"); // import express
 const morgan = require("morgan"); // import morgan debugger
 const UserRouter = require("./controllers/user");
 const methodOverride = require("method-override");
+const Build = require('./models/builds');
 const mongoose = require("mongoose");
 const path = require("path"); // built in node module we use to resolve paths more on this when we use it
 
@@ -64,6 +65,30 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.send("Your server is currently running.")
 });
+
+// INDEX
+
+app.get('/builds', (req, res) => {
+    Build.find({})
+    .then((builds) => {
+        res.render("builds/Index" , { builds })
+    })
+    .catch((error) => {
+        res.status(400).json({ error })
+    })
+});
+
+// NEW
+
+// DELETE
+
+// UPDATE
+
+// CREATE
+
+// EDIT
+
+// SHOW
 
 app.use("/user", UserRouter); // send all "/user" routes to user router
 //////////////////////////////////////////////
