@@ -9,11 +9,9 @@ class Show extends React.Component {
               <div>
                 <article>
                   <a href="/builds">Go Back To Your PC Builds</a>
-                  <h1>
-                    {build.name}
-                  </h1>
                   <br />
                   <h2>
+                    Name of Build: {build.name} <br />
                     Motherboard: {build.motherboard} <br />
                     Processor: {build.processor} <br />
                     Graphics Card: {build.graphicsCard} <br />
@@ -26,6 +24,7 @@ class Show extends React.Component {
                     <input type="submit" value="Delete" />
 
                   </form>
+                  <hr />
                 </article>
               </div>
           </Default>

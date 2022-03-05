@@ -4,7 +4,7 @@ const { Schema, model } = require('mongoose');
 
 const buildSchema = new Schema({
     userId: String,
-    buildName: String,
+    name: String,
     motherboard: String,
     processor: String,
     graphicsCard: String,

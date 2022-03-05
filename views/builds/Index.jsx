@@ -16,7 +16,7 @@ class Index extends React.Component {
                             <article>
                                 <a href={`/builds/${build._id}`}>
                                     <h2>
-                                        {build.name} - {build.upToDate ? 'This build is up-to-date' : 'This build is outdated'}
+                                        {build.name} : {build.upToDate ? 'Up-to-date' : 'Outdated'}
                                     </h2>
                                 </a>
                             </article>

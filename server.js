@@ -82,11 +82,31 @@ app.get('/builds', (req, res) => {
 
 // NEW
 
+app.get('/builds/new', (req, res) => {
+    res.render('builds/New')
+});
+
 // DELETE
 
 // UPDATE
 
 // CREATE
+
+app.post('/builds', (req, res) => {
+    if(req.body.upToDate === 'on'){
+        req.body.upToDate = true
+    } else {
+        req.body.upToDate = false
+    }
+
+    Build.create(req.body)
+        .then((createdBuild) => {
+            res.redirect(`/builds/${createdBuild._id}`)
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+});
 
 // EDIT
 
