@@ -12,6 +12,7 @@ const methodOverride = require("method-override");
 const Build = require('./models/builds');
 const mongoose = require("mongoose");
 const path = require("path"); // built in node module we use to resolve paths more on this when we use it
+const router = require("./controllers/user");
 
 /////////////////////////////////////////////
 // Database Connection
@@ -74,6 +75,7 @@ app.get('/builds', (req, res) => {
         res.render("builds/Index" , { builds })
     })
     .catch((error) => {
+        console.log(error);
         res.status(400).json({ error })
     })
 });
@@ -90,7 +92,21 @@ app.get('/builds', (req, res) => {
 
 // SHOW
 
+app.get('/builds/:id', (req, res) => {
+    const { id } = req.params
+
+    Build.findById(id)
+        .then((build) => {
+            res.render('builds/Show', { build })
+        })
+        .catch((error) => {
+            console.log(error);
+            res.status(400).json({ error })
+        })
+});
+
 app.use("/user", UserRouter); // send all "/user" routes to user router
+
 //////////////////////////////////////////////
 // Server Listener
 //////////////////////////////////////////////
