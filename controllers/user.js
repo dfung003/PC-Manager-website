@@ -11,14 +11,44 @@ router.post('/signup', async (req, res) => {
         req.body.password = hash
         User.create(req.body, (err) => {
             if (!err) {
-                res.status(200).send({message: 'user created'})
+                res.redirect('/')
             } else {
-                res.status(400).send(err)
+                res.status(500).send(err)
             }
         })
     })
     
-})
+});
+
+router.post("/login", async (req, res) => {
+    // get the data from the request body
+    const { username, password } = req.body;
+    // search for the user
+    User.findOne({ username })
+      .then(async (user) => {
+        // check if user exists
+        if (user) {
+          // compare password
+          const result = await bcrypt.compare(password, user.password);
+          if (result) {
+            // redirect to builds page if successful
+            res.redirect("/builds");
+          } else {
+            // error if password doesn't match
+            res.json({ error: "password doesn't match" });
+          }
+        } else {
+          // send error if user doesn't exist
+          res.json({ error: "user doesn't exist" });
+        }
+      })
+      .catch((error) => {
+        // send error as json
+        console.log(error);
+        res.json({ error });
+      });
+  });
+
 
 
 

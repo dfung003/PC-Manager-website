@@ -13,7 +13,7 @@ class Index extends React.Component {
                     </nav>
                     {
                         builds.map((build) => (
-                            <article>
+                            <article className="build">
                                 <a href={`/builds/${build._id}`}>
                                     <h2>
                                         {build.name} : {build.upToDate ? 'Up-to-date' : 'Outdated'}

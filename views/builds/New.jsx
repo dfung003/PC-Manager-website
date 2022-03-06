@@ -6,6 +6,7 @@ class New extends React.Component {
     render(){
         return (
             <Default>
+                <a href="/builds">Go Back To Your PC Builds</a>
                 <form action="/builds" method="POST">
                 <fieldset>
                     <legend>Create a Build</legend>
