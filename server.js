@@ -121,6 +121,17 @@ app.post('/builds', (req, res) => {
 
 // EDIT
 
+app.get('/builds/:id/edit', (req, res) => {
+    const { id } = req.params
+    Build.findById(id)
+        .then((build) => {
+            res.render('builds/Edit', { build })
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+});
+
 // SHOW
 
 app.get('/builds/:id', (req, res) => {
