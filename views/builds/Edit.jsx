@@ -46,7 +46,7 @@ class Edit extends React.Component {
                         UP-TO-DATE?:{ this.props.build.upToDate? <input type="checkbox" name="upToDate" defaultChecked />: <input type="checkbox" name="upToDate"/> }
                     </label>
                     </fieldset>
-                    <input type="submit" value={`Edit ${build.name}`} />
+                    <input type="submit" value={`Submit Changes to ${build.name}`} />
                 </form>
             </Default>
         )

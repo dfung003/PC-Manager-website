@@ -101,6 +101,19 @@ app.delete('/builds/:id', (req, res) => {
 
 // UPDATE
 
+app.put('/builds/:id', (req, res) => {
+    const { id } = req.params;
+    req.body.upToDate = req.body.upToDate === 'on' ? true: false;
+
+    Build.findByIdAndUpdate(id, req.body, { new: true })
+        .then(() => {
+            res.redirect(`/builds/${id}`);
+        })
+        .catch((error) => {
+            res.status(400).json({ error });
+        })
+});
+
 // CREATE
 
 app.post('/builds', (req, res) => {
