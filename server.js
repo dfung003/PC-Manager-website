@@ -88,6 +88,17 @@ app.get('/builds/new', (req, res) => {
 
 // DELETE
 
+app.delete('/builds/:id', (req, res) => {
+    const { id } = req.params;
+    Build.findByIdAndDelete(id)
+        .then(() => {
+            res.redirect('/builds');
+        })
+        .catch((error) => {
+            res.status(400).json({ error });
+        })
+});
+
 // UPDATE
 
 // CREATE
