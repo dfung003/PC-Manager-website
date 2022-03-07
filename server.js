@@ -82,7 +82,7 @@ app.get('/', (req, res) => {
 // INDEX
 
 app.get('/builds', (req, res) => {
-    Build.find({})
+    Build.find({ userId: req.session.userId })
     .then((builds) => {
         res.render("builds/Index" , { builds })
     })
@@ -134,6 +134,7 @@ app.post('/builds', (req, res) => {
     } else {
         req.body.upToDate = false
     }
+    req.body.userId = req.session.userId
 
     Build.create(req.body)
         .then((createdBuild) => {

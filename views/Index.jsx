@@ -13,9 +13,11 @@ class Index extends React.Component {
                             <input name="username" type="text" required placeholder="User Name" />
                             <input name="password" type="password" required placeholder="Password" />
                             <button type="Submit">Sign Up</button>
+                            <button type="Submit" formAction="/user/login">Log In</button>
                         </form>
+                        <a href="/user/logout">Log Out</a>
                     </nav>
-                    
+                <a href="/builds">View Your Builds</a>    
                 </div>
             </Default>
         )

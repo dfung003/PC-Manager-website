@@ -31,8 +31,11 @@ router.post("/login", async (req, res) => {
           // compare password
           const result = await bcrypt.compare(password, user.password);
           if (result) {
-            // redirect to builds page if successful
-            res.redirect("/builds");
+            req.session.username = username;
+            req.session.loggedIn = true;
+            req.session.userId = user._id;
+            // redirect to home page if successful
+            res.redirect("/");
           } else {
             // error if password doesn't match
             res.json({ error: "password doesn't match" });
@@ -49,8 +52,11 @@ router.post("/login", async (req, res) => {
       });
   });
 
-
-
+router.get("/logout", (req, res) => {
+    req.session.destroy((err) => {
+        res.redirect("/");
+      });
+})
 
 
 
