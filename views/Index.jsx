@@ -17,7 +17,7 @@ class Index extends React.Component {
                         </form>
                         <a href="/user/logout">Log Out</a>
                     </nav>
-                <a href="/builds">View Your Builds</a>    
+                <a href="/builds/new">Create Your PC Build</a>    
                 </div>
             </Default>
         )

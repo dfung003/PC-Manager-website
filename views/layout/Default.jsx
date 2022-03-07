@@ -11,6 +11,14 @@ class DefaultLayout extends React.Component {
                 </head>
                     <body>
                         <header>PCManager</header>
+                        <div>
+                            <nav id="nav-bar">
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/builds">Your Builds</a></li>
+                                </ul>
+                            </nav>
+                        </div>
                         {this.props.children}
                         <footer>Created By: Damon Fung</footer>
 
