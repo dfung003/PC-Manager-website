@@ -8,7 +8,7 @@ class Index extends React.Component {
             <Default>
                 <div>
                     <h1>Home Page</h1>
-                    <nav>
+                    <nav id="username-form">
                         <form action="/user/signup" method="POST">
                             <input name="username" type="text" required placeholder="User Name" />
                             <input name="password" type="password" required placeholder="Password" />
