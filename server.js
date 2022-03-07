@@ -76,7 +76,7 @@ app.use(
 ////////////////////////////////////////////
 
 app.get('/', (req, res) => {
-    res.render("Index")
+    res.render("Home")
 });
 
 // INDEX

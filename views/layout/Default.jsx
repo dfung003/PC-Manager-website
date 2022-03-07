@@ -10,15 +10,36 @@ class DefaultLayout extends React.Component {
                     <link rel="stylesheet" href="/css/app.css" /> 
                 </head>
                     <body>
-                        <header>PCManager</header>
-                        <div>
-                            <nav id="nav-bar">
-                                <ul>
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="/builds">Your Builds</a></li>
-                                </ul>
+                        <header>
+                            <div>
+                            PCManager
+                            </div>
+                            <div id="login-div">
+                                <nav id="username-form">
+                                <form action="/user/signup" method="POST">
+                                    <input name="username" type="text" required placeholder="User Name" />
+                                    <input name="password" type="password" required placeholder="Password" />
+                                    <button type="Submit">Sign Up</button>
+                                    <button type="Submit" formAction="/user/login">Log In</button>
+                                </form>
+                            <a href="/user/logout" id="logout">Log Out</a>
                             </nav>
-                        </div>
+                            </div>
+                        </header>
+                        
+                    
+                            <div id="nav-bar">
+                                <div id="link-container">
+                                    <div className="link-background">
+                                        <a href="/">Home</a>
+                                    </div>
+                                        <span>|</span>
+                                    <div className="link-background">
+                                        <a href="/builds">Your Builds</a>
+                                    </div>
+                                </div>  
+
+                            </div>
                         {this.props.children}
                         <footer>Created By: Damon Fung</footer>
 
