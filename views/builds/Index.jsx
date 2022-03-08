@@ -6,7 +6,7 @@ class Index extends React.Component {
         const { builds } = this.props;
         return (
             <Default>
-                <div>
+                <div id="builds-title">
                     <h1>Your Builds</h1>
                     <nav>
                         <a href="/builds/new">Create A New PC Build</a>

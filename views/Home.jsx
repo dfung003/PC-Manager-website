@@ -7,7 +7,7 @@ class Home extends React.Component {
         return (
             <Default>
                 <div id="build-selection">
-                    <div>
+                    <div id="big-text-section">
                         <h1>Keep Track Of Your PC Parts. Build The PC Of Your Choosing.</h1>
                     </div>
                     <div>
@@ -22,9 +22,9 @@ class Home extends React.Component {
 
                             <hr />
                             <div className="btn-container">
-                                <a className="info-button">Motherboards</a>
-                                <a className="info-button">Processors</a>
-                                <a className="info-button">Graphics Cards</a>
+                                <button className="info-button" id="motherboard-btn">MOTHERBOARDS</button>
+                                <button className="info-button" id="processor-btn">PROCESSORS</button>
+                                <button className="info-button" id="graphics-btn">GRAPHICS CARDS</button>
                             </div>
                         </div>
                     </div>
