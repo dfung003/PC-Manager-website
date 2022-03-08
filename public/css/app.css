@@ -207,6 +207,14 @@ hr {
   background-size: 100%;
 }
 
+.browse-text {
+  border: 1px solid white;
+}
+
+.browse-list {
+  background-color: #282838;
+}
+
 footer {
   height: 50px;
   background-color: #11111a;
