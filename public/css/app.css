@@ -69,13 +69,8 @@ h1 {
   color: rgb(255, 255, 255);
 }
 
-#builds-title > h1 {
-  text-align: left;
-  margin:0;
-}
-
 h2 {
-  /* font-size: 20px; */
+  font-size: 20px;
   color: white;
 }
 
@@ -208,4 +203,13 @@ hr {
 #graphics-btn {
   background-image: url("/assets/graphicscardImg.jpg");
   background-size: 100%;
+}
+
+footer {
+  height: 50px;
+  background-color: #11111a;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
 }

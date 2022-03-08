@@ -18,6 +18,7 @@ class Edit extends React.Component {
                         defaultValue={build.name}
                         />
                     </label>
+                    <br />
                     <label>
                         MOTHERBOARD:<input
                         type="text"
@@ -26,6 +27,7 @@ class Edit extends React.Component {
                         defaultValue={build.motherboard}
                         />
                     </label>
+                    <br />
                     <label>
                         PROCESSOR:<input
                         type="text"
@@ -34,6 +36,7 @@ class Edit extends React.Component {
                         defaultValue={build.processor}
                         />
                     </label>
+                    <br />
                     <label>
                         Graphics Card:<input
                         type="text"
@@ -42,9 +45,11 @@ class Edit extends React.Component {
                         defaultValue={build.graphicsCard}
                         />
                     </label>
+                    <br />
                     <label>
                         UP-TO-DATE?:{ this.props.build.upToDate? <input type="checkbox" name="upToDate" defaultChecked />: <input type="checkbox" name="upToDate"/> }
                     </label>
+                    <br />
                     </fieldset>
                     <input type="submit" value={`Submit Changes to ${build.name}`} />
                 </form>

@@ -10,6 +10,7 @@ class Show extends React.Component {
                 <article>
                   <a href="/builds">Go Back To Your PC Builds</a>
                   <br />
+                  <br />
                   <h2>
                     Name of Build: {build.name} <br />
                     Motherboard: {build.motherboard} <br />
