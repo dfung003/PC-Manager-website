@@ -3,7 +3,6 @@ const Default = require('./layout/Default.jsx')
 
 class Home extends React.Component {
     render() {
-        const { builds } = this.props;
         return (
             <Default>
                 <div id="build-selection">
@@ -22,9 +21,15 @@ class Home extends React.Component {
 
                             <hr />
                             <div className="btn-container">
-                                <button className="info-button" id="motherboard-btn">MOTHERBOARDS</button>
-                                <button className="info-button" id="processor-btn">PROCESSORS</button>
-                                <button className="info-button" id="graphics-btn">GRAPHICS CARDS</button>
+                                <form method="GET" action="/motherboards">
+                                    <button className="info-button" id="motherboard-btn">MOTHERBOARDS</button>
+                                </form>
+                                <form method="GET" action="/cpu">
+                                    <button className="info-button" id="processor-btn">PROCESSORS</button>
+                                </form>
+                                <form method="GET" action="/gpu">
+                                    <button className="info-button" id="graphics-btn">GRAPHICS CARDS</button>
+                                </form>
                             </div>
                         </div>
                     </div>

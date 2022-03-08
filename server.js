@@ -79,6 +79,18 @@ app.get('/', (req, res) => {
     res.render("Home")
 });
 
+app.get('/motherboards', (req, res) => {
+    res.render("browse/Motherboards")
+});
+
+app.get('/cpu', (req, res) => {
+    res.render("browse/Cpu")
+});
+
+app.get('/gpu', (req, res) => {
+    res.render("browse/Gpu")
+});
+
 // INDEX
 
 app.get('/builds', (req, res) => {
