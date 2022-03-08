@@ -5,7 +5,7 @@ class Motherboard extends React.Component {
     render() {
         return (
             <Default>
-                <div>
+                <div className="browse-text">
                     <h1>List of Recommended Motherboards</h1>
                    <ul>
                        <li>ASUS TUF GAMING X-570-PLUS (WI-FI)</li>
