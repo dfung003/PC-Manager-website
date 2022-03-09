@@ -106,6 +106,10 @@ app.get('/reviews', (req, res) => {
 
 // NEW
 
+app.get('/reviews/new', (req, res) => {
+    res.render('reviews/New')
+});
+
 // CREATE
 
 // SHOW
