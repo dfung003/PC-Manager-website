@@ -15,9 +15,9 @@ class Show extends React.Component {
               <div>
                 <article>
                   <a href="/reviews">Go Back To Product Reviews Page</a>
+                  <hr />
                   <br />
-                  <br />
-                  <h2>
+                  <h2 className="review-show">
                     Written by: {review.author} <br />
                     Product Name: {review.productName} <br />
                     Product Review: {review.entry} <br />
