@@ -15,7 +15,7 @@ class Show extends React.Component {
                     Written by: {review.author} <br />
                     Product Name: {review.productName} <br />
                     Product Review: {review.entry} <br />
-                    Product Rating: {review.rating} <br />
+                    Product Rating: {review.rating}/5 <br />
                   </h2>
                   
                   <hr />

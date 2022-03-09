@@ -15,10 +15,9 @@ class Index extends React.Component {
                     {
                         reviews.map((review) => (
                             <article className="review">
-                                <h1>Product Reviews</h1>
                                 <a href={`/reviews/${review._id}`}>
                                     <h2>
-                                        {review.author} - {review.productName}
+                                        {review.author}'s product review of {review.productName}
                                     </h2>
                                 </a>
                             </article>
