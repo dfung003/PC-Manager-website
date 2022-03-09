@@ -44,7 +44,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 250px;
+  width: 300px;
   height: 100%;
 }
 
@@ -59,6 +59,10 @@ body {
 }
 
 .build {
+  background-color: #282838;
+}
+
+.review {
   background-color: #282838;
 }
 
@@ -166,7 +170,7 @@ span {
 }
 
 hr {
-  background-color: white;
+  background-color: #37374d;
   height: .25px;
 }
 

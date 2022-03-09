@@ -8,7 +8,7 @@ class Show extends React.Component {
             <Default>
               <div>
                 <article>
-                  <a href="/builds">Go Back To Your PC Builds</a>
+                  <a href="/builds">Go Back To Saved PC Builds</a>
                   <br />
                   <br />
                   <h2>

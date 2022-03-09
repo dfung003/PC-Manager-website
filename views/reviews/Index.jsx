@@ -11,6 +11,7 @@ class Index extends React.Component {
                     <nav>
                         <a href="/reviews/new">Add A New Product Review</a>
                     </nav>
+                    <hr />
                     <br />
                     {
                         reviews.map((review) => (

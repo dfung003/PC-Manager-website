@@ -11,6 +11,7 @@ class Index extends React.Component {
                     <nav>
                         <a href="/builds/new">Create A New PC Build</a>
                     </nav>
+                    <hr />
                     <br />
                     {
                         builds.map((build) => (

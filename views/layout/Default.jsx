@@ -38,6 +38,10 @@ class DefaultLayout extends React.Component {
                                     <div className="link-background">
                                         <a href="/builds">Saved Builds</a>
                                     </div>
+                                        <span>|</span>
+                                    <div className="link-background">
+                                        <a href="/reviews">Product Reviews</a>
+                                    </div>
                                 </div>  
 
                             </div>
