@@ -218,6 +218,14 @@ hr {
   background-color: #282838;
 }
 
+.not-checked {
+  color: black
+}
+
+.checked {
+  color: yellow
+}
+
 footer {
   height: 50px;
   background-color: #11111a;

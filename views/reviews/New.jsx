@@ -24,7 +24,7 @@ class New extends React.Component {
                     </label>
                     <br />
                     <label>
-                        Your Product Rating:<input type="number" name="rating" /> / 5
+                        Your Product Rating:<input type="number" name="rating" min={0} max={5} /> / 5
                     </label>
                     <br /> 
                     </fieldset>
