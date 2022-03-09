@@ -94,6 +94,16 @@ app.get('/gpu', (req, res) => {
 
 // INDEX
 
+app.get('/reviews', (req, res) => {
+    Review.find({})
+    .then((reviews) => {
+        res.render("reviews/Index", { reviews })
+    })
+    .catch((error) => {
+        res.status(400).json({ error })
+    })
+});
+
 // NEW
 
 // CREATE
