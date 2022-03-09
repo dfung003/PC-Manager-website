@@ -7,6 +7,8 @@ class New extends React.Component {
         return (
             <Default>
                 <a href="/builds">Go Back To Saved PC Builds</a>
+                <hr />
+                <br />
                 <form action="/builds" method="POST">
                 <fieldset>
                     <legend>Create a Build</legend>
@@ -15,7 +17,7 @@ class New extends React.Component {
                     </label>
                     <br />
                     <label>
-                        Motherboard:<input type="text" name="motherboard" placeholder="enter motherboard model" /> 
+                        Motherboard:<input type="text" name="motherboard" placeholder="enter motherboard model" size="25"/> 
                     </label>
                     <br />
                     <label>
@@ -23,7 +25,7 @@ class New extends React.Component {
                     </label>
                     <br />
                     <label>
-                        Graphics Card:<input type="text" name="graphicsCard" placeholder="enter graphics card model" /> 
+                        Graphics Card:<input type="text" name="graphicsCard" placeholder="enter graphics card model" size="25" /> 
                     </label>
                     <br />
                     <label> Is Your Build Up-To-Date?:<input type="checkbox" name="upToDate" /> </label>

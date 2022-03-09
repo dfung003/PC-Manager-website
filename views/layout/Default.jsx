@@ -12,7 +12,7 @@ class DefaultLayout extends React.Component {
                 </head>
                     <body>
                         <header>
-                            <div>
+                            <div id="website-name">
                             PCManager
                             </div>
                             <div id="login-div">
