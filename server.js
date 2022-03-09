@@ -13,6 +13,7 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const Build = require('./models/builds');
+const Review = require('./models/reviews');
 const mongoose = require("mongoose");
 const path = require("path"); // built in node module we use to resolve paths more on this when we use it
 
@@ -91,99 +92,15 @@ app.get('/gpu', (req, res) => {
     res.render("browse/Gpu")
 });
 
-// // INDEX
+// INDEX
 
-// app.get('/builds', (req, res) => {
-//     Build.find({ userId: req.session.userId })
-//     .then((builds) => {
-//         res.render("builds/Index" , { builds })
-//     })
-//     .catch((error) => {
-//         console.log(error);
-//         res.status(400).json({ error })
-//     })
-// });
+// NEW
 
-// // NEW
+// CREATE
 
-// app.get('/builds/new', (req, res) => {
-//     res.render('builds/New')
-// });
+// SHOW
 
-// // DELETE
-
-// app.delete('/builds/:id', (req, res) => {
-//     const { id } = req.params;
-//     Build.findByIdAndDelete(id)
-//         .then(() => {
-//             res.redirect('/builds');
-//         })
-//         .catch((error) => {
-//             res.status(400).json({ error });
-//         })
-// });
-
-// // UPDATE
-
-// app.put('/builds/:id', (req, res) => {
-//     const { id } = req.params;
-//     req.body.upToDate = req.body.upToDate === 'on' ? true: false;
-
-//     Build.findByIdAndUpdate(id, req.body, { new: true })
-//         .then(() => {
-//             res.redirect(`/builds/${id}`);
-//         })
-//         .catch((error) => {
-//             res.status(400).json({ error });
-//         })
-// });
-
-// // CREATE
-
-// app.post('/builds', (req, res) => {
-//     if(req.body.upToDate === 'on'){
-//         req.body.upToDate = true
-//     } else {
-//         req.body.upToDate = false
-//     }
-//     req.body.userId = req.session.userId
-
-//     Build.create(req.body)
-//         .then((createdBuild) => {
-//             res.redirect(`/builds/${createdBuild._id}`)
-//         })
-//         .catch((error) => {
-//             res.status(400).json({ error })
-//         })
-// });
-
-// // EDIT
-
-// app.get('/builds/:id/edit', (req, res) => {
-//     const { id } = req.params
-//     Build.findById(id)
-//         .then((build) => {
-//             res.render('builds/Edit', { build })
-//         })
-//         .catch((error) => {
-//             res.status(400).json({ error })
-//         })
-// });
-
-// // SHOW
-
-// app.get('/builds/:id', (req, res) => {
-//     const { id } = req.params
-
-//     Build.findById(id)
-//         .then((build) => {
-//             res.render('builds/Show', { build })
-//         })
-//         .catch((error) => {
-//             console.log(error);
-//             res.status(400).json({ error })
-//         })
-// });
+/////////////////
 
 app.use("/user", UserRouter); // send all "/user" routes to user router
 
