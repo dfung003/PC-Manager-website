@@ -110,6 +110,18 @@ app.get('/reviews', (req, res) => {
 
 // SHOW
 
+app.get('/reviews/:id', (req, res) => {
+    const { id } = req.params
+
+    Review.findById(id)
+        .then((review) => {
+            res.render('reviews/Show', { review })
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+});
+
 /////////////////
 
 app.use("/user", UserRouter); // send all "/user" routes to user router
