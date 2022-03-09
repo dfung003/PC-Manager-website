@@ -110,8 +110,8 @@ li {
 
 input[type=submit] {
   /* padding: .3em; */
-  color: yellow;
-  background: darkblue;
+  color: white;
+  background: #2b86de;
   font-size: 12px;
   border-radius: 10%;
 }
@@ -124,7 +124,7 @@ button {
   font-size: 12px;
   height: 25px;
   text-align: center;
-  background-color: #eda920;
+  background-color: #d1951c;
   color: white;
   font-family: Helvetica;
   border-radius: 20%;
@@ -146,6 +146,10 @@ button {
   align-items: center;
   background-color: #11111a;
   height: 60vh;
+}
+
+#show-text {
+  background-color: #282838;
 }
 
 #big-text-section {
