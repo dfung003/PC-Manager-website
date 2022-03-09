@@ -8,12 +8,11 @@ require("dotenv").config(); // Load environment variables
 const express = require("express"); // import express
 const morgan = require("morgan"); // import morgan debugger
 const UserRouter = require("./controllers/user");
-const BuildRouter = require("./controllers/builds")
+const BuildRouter = require("./controllers/builds");
+const ReviewRouter = require("./controllers/reviews");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
-const Build = require('./models/builds');
-const Review = require('./models/reviews');
 const mongoose = require("mongoose");
 const path = require("path"); // built in node module we use to resolve paths more on this when we use it
 
@@ -92,55 +91,57 @@ app.get('/gpu', (req, res) => {
     res.render("browse/Gpu")
 });
 
-// INDEX
+// // INDEX
 
-app.get('/reviews', (req, res) => {
-    Review.find({})
-    .then((reviews) => {
-        res.render("reviews/Index", { reviews })
-    })
-    .catch((error) => {
-        res.status(400).json({ error })
-    })
-});
+// app.get('/reviews', (req, res) => {
+//     Review.find({})
+//     .then((reviews) => {
+//         res.render("reviews/Index", { reviews })
+//     })
+//     .catch((error) => {
+//         res.status(400).json({ error })
+//     })
+// });
 
-// NEW
+// // NEW
 
-app.get('/reviews/new', (req, res) => {
-    res.render('reviews/New')
-});
+// app.get('/reviews/new', (req, res) => {
+//     res.render('reviews/New')
+// });
 
-// CREATE
+// // CREATE
 
-app.post('/reviews', (req, res) => {
-    Review.create(req.body)
-        .then((createdReview) => {
-            res.redirect(`/reviews/${createdReview._id}`)
-        })
-        .catch((error) => {
-            res.status(400).json({ error })
-        })
-});
+// app.post('/reviews', (req, res) => {
+//     Review.create(req.body)
+//         .then((createdReview) => {
+//             res.redirect(`/reviews/${createdReview._id}`)
+//         })
+//         .catch((error) => {
+//             res.status(400).json({ error })
+//         })
+// });
 
-// SHOW
+// // SHOW
 
-app.get('/reviews/:id', (req, res) => {
-    const { id } = req.params
+// app.get('/reviews/:id', (req, res) => {
+//     const { id } = req.params
 
-    Review.findById(id)
-        .then((review) => {
-            res.render('reviews/Show', { review })
-        })
-        .catch((error) => {
-            res.status(400).json({ error })
-        })
-});
+//     Review.findById(id)
+//         .then((review) => {
+//             res.render('reviews/Show', { review })
+//         })
+//         .catch((error) => {
+//             res.status(400).json({ error })
+//         })
+// });
 
 /////////////////
 
 app.use("/user", UserRouter); // send all "/user" routes to user router
 
 app.use("/builds", BuildRouter);  // send all "/builds" routes to build router
+
+app.use("/reviews", ReviewRouter); // send all "/reviews" routes to review router
 
 
 
