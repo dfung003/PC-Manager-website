@@ -112,6 +112,16 @@ app.get('/reviews/new', (req, res) => {
 
 // CREATE
 
+app.post('/reviews', (req, res) => {
+    Review.create(req.body)
+        .then((createdReview) => {
+            res.redirect(`/reviews/${createdReview._id}`)
+        })
+        .catch((error) => {
+            res.status(400).json({ error })
+        })
+});
+
 // SHOW
 
 app.get('/reviews/:id', (req, res) => {
