@@ -13,9 +13,14 @@ class Show extends React.Component {
                   <br />
                   <h2>
                     Name of Build: {build.name} <br />
+                    Case: {build.case} <br />
                     Motherboard: {build.motherboard} <br />
                     Processor: {build.processor} <br />
                     Graphics Card: {build.graphicsCard} <br />
+                    Memory: {build.memory} <br />
+                    CPU Cooler: {build.cpuCooler} <br />
+                    Power Supply: {build.powerSupply} <br />
+                    Storage: {build.storage} <br />
                   </h2>
                   <p>{build.upToDate ? 'This build is up-to-date' : 'This build is outdated'}</p>
 
