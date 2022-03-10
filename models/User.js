@@ -1,3 +1,5 @@
+const mongoose = require("./connection");
+
 const { Schema, model } = require('mongoose');
 
 const userSchema = new Schema({
