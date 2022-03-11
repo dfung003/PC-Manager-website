@@ -20,6 +20,9 @@ for this project.
 * [Wireframe.cc](https://wireframe.cc/)
 * [Lucid.app](https://lucid.app/)
 
+## How to use
+* ![Alt text](public/assets/pc_manager_website.png "Title")
+
 ## Credits
 * [PCPartPicker](https://pcpartpicker.com), as my main source of inspiration on 
 the functionality and appearance for my website
