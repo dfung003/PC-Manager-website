@@ -30,7 +30,6 @@ class DefaultLayout extends React.Component {
                                             <input name="password" type="password" required placeholder="Password" />
                                             <button type="Submit">Sign Up</button>
                                             <button type="Submit" formAction="/user/login">Log In</button><br />
-                                            <a href="/user/logout" id="logout">Log Out</a>
                                         </form>
                                     }
                                 
