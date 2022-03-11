@@ -3,8 +3,9 @@ const Default = require('../layout/Default.jsx')
 
 class Signup extends React.Component {
     render(){
+        const { session } = this.props
         return (
-            <Default>
+            <Default session={session}>
                 <div>
                     <form action="/user/signup" method="post">
                         <fieldset>

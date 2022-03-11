@@ -9,7 +9,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     Build.find({ userId: req.session.userId })
     .then((builds) => {
-        res.render("builds/Index" , { builds })
+        res.render("builds/Index" , { builds, session: req.session })
     })
     .catch((error) => {
         console.log(error);
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 // NEW
 
 router.get('/new', (req, res) => {
-    res.render('builds/New')
+    res.render('builds/New', { session: req.session })
 });
 
 // DELETE
@@ -29,7 +29,7 @@ router.delete('/:id', (req, res) => {
     const { id } = req.params;
     Build.findByIdAndDelete(id)
         .then(() => {
-            res.redirect('/builds');
+            res.redirect('/builds', { session: req.session });
         })
         .catch((error) => {
             res.status(400).json({ error });
@@ -76,7 +76,7 @@ router.get('/:id/edit', (req, res) => {
     const { id } = req.params
     Build.findById(id)
         .then((build) => {
-            res.render('builds/Edit', { build })
+            res.render('builds/Edit', { build, session: req.session })
         })
         .catch((error) => {
             res.status(400).json({ error })
@@ -90,7 +90,7 @@ router.get('/:id', (req, res) => {
 
     Build.findById(id)
         .then((build) => {
-            res.render('builds/Show', { build })
+            res.render('builds/Show', { build, session: req.session })
         })
         .catch((error) => {
             console.log(error);

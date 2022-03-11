@@ -3,9 +3,9 @@ const Default = require('../layout/Default.jsx')
 
 class Index extends React.Component {
     render(){
-        const { builds } = this.props;
+        const { builds, session } = this.props;
         return (
-            <Default>
+            <Default session={session}>
                 <div id="builds-title">
                     <h1>Saved Builds</h1>
                     <nav>

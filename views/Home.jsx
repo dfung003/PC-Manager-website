@@ -3,8 +3,9 @@ const Default = require('./layout/Default.jsx')
 
 class Home extends React.Component {
     render() {
+        const { session } = this.props
         return (
-            <Default>
+            <Default session={session}>
                 <div id="build-selection">
                     <div id="big-text-section">
                         <h1>Keep Track Of Your PC Parts. Build The PC Of Your Choosing.</h1>

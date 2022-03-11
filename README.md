@@ -15,6 +15,7 @@ for this project.
 * HTML, CSS, JavaScript
 * NodeJS, Express, REACT
 * MongoDB, Heroku
+* Postman
 * Visual Studio Code
 * [Wireframe.cc](https://wireframe.cc/)
 * [Lucid.app](https://lucid.app/)

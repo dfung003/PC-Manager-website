@@ -4,8 +4,9 @@ const Default = require('../layout/Default.jsx');
 
 class New extends React.Component {
     render(){
+        const { session } = this.props
         return (
-            <Default>
+            <Default session={session}>
                 <a href="/builds">Go Back To Saved PC Builds</a>
                 <hr />
                 <br />

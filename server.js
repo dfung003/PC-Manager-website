@@ -40,19 +40,19 @@ middleware(app);
 ////////////////////////////////////////////
 
 app.get('/', (req, res) => {
-    res.render("Home")
+    res.render("Home", {session: req.session})
 });
 
 app.get('/motherboards', (req, res) => {
-    res.render("browse/Motherboards")
+    res.render("browse/Motherboards", { session: req.session })
 });
 
 app.get('/cpu', (req, res) => {
-    res.render("browse/Cpu")
+    res.render("browse/Cpu", { session: req.session })
 });
 
 app.get('/gpu', (req, res) => {
-    res.render("browse/Gpu")
+    res.render("browse/Gpu", { session: req.session })
 });
 
 /////////////////

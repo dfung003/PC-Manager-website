@@ -4,9 +4,9 @@ const Default = require('../layout/Default.jsx');
 
 class Edit extends React.Component {
     render(){
-        const { build } = this.props
+        const { build, session } = this.props
         return (
-            <Default>
+            <Default session={session}>
                 <form action={`/builds/${build._id}?_method=PUT`} method="POST">
                     <fieldset>
                     <legend>Edit {build.name}</legend>

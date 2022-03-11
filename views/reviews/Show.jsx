@@ -9,9 +9,9 @@ const isChecked = (starId, review_rating) => {
 
 class Show extends React.Component {
     render(){
-        const { review } = this.props;
+        const { review, session } = this.props;
         return (
-            <Default>
+            <Default session={session}>
               <div>
                 <article>
                   <a href="/reviews">Go Back To Product Reviews Page</a>

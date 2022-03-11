@@ -3,9 +3,9 @@ const Default = require('../layout/Default.jsx')
 
 class Show extends React.Component {
   render() {
-    const { build } = this.props;
+    const { build, session } = this.props;
     return (
-      <Default>
+      <Default session={session}>
         <div>
           <article>
             <a href="/builds">Go Back To Saved PC Builds</a>

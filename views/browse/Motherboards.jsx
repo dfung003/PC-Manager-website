@@ -3,8 +3,9 @@ const Default = require('../layout/Default.jsx')
 
 class Motherboard extends React.Component {
     render() {
+        const { session } = this.props
         return (
-            <Default>
+            <Default session={session}>
                 <div className="browse-text">
                     <h1>List of Recommended Motherboards</h1>
                     <div className="browse-list">

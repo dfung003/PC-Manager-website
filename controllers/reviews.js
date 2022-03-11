@@ -10,7 +10,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     Review.find({})
     .then((reviews) => {
-        res.render("reviews/Index", { reviews })
+        res.render("reviews/Index", { reviews, session: req.session })
     })
     .catch((error) => {
         res.status(400).json({ error })
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 // NEW
 
 router.get('/new', (req, res) => {
-    res.render('reviews/New')
+    res.render('reviews/New', { session: req.session })
 });
 
 // CREATE
@@ -42,7 +42,7 @@ router.get('/:id', (req, res) => {
 
     Review.findById(id)
         .then((review) => {
-            res.render('reviews/Show', { review })
+            res.render('reviews/Show', { review, session: req.session })
         })
         .catch((error) => {
             res.status(400).json({ error })

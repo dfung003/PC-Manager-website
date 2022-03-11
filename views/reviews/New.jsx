@@ -4,8 +4,9 @@ const Default = require('../layout/Default.jsx');
 
 class New extends React.Component {
     render(){
+        const { session } = this.props
         return (
-            <Default>
+            <Default session={session}>
                 <a href="/reviews">Go Back To Product Reviews Page</a>
                 <form action="/reviews" method="POST">
                 <br />

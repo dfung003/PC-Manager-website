@@ -2,6 +2,7 @@ const React = require('react');
 
 class DefaultLayout extends React.Component {
     render(){
+        const { session } = this.props
         return(
             <html>
                 <head>
@@ -17,13 +18,22 @@ class DefaultLayout extends React.Component {
                             </div>
                             <div id="login-div">
                                 <nav id="username-form">
-                                <form action="/user/signup" method="POST">
-                                    <input name="username" type="text" required placeholder="User Name" />
-                                    <input name="password" type="password" required placeholder="Password" />
-                                    <button type="Submit">Sign Up</button>
-                                    <button type="Submit" formAction="/user/login">Log In</button><br />
-                                    <a href="/user/logout" id="logout">Log Out</a>
-                                </form>
+                                    {
+                                        session.loggedIn ? 
+                                        <div>
+                                            <p style={{color: 'white', fontSize:"12px"}}>Hello {session.username}</p>
+                                            <a href="/user/logout" id="logout">Log Out</a>
+                                        </div>
+                                        :
+                                        <form action="/user/signup" method="POST">
+                                            <input name="username" type="text" required placeholder="User Name" />
+                                            <input name="password" type="password" required placeholder="Password" />
+                                            <button type="Submit">Sign Up</button>
+                                            <button type="Submit" formAction="/user/login">Log In</button><br />
+                                            <a href="/user/logout" id="logout">Log Out</a>
+                                        </form>
+                                    }
+                                
                             
                             </nav>
                             </div>
