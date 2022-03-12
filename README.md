@@ -11,7 +11,7 @@ many components involved that it is nice to have a website to keep track of all 
 your PC hardware before installing each piece. I used PCPartPicker as my inspiration
 for this project.
 
-## Technologies used
+## Technologies Used
 * HTML, CSS, JavaScript
 * NodeJS, Express, REACT
 * MongoDB, Heroku
@@ -20,19 +20,21 @@ for this project.
 * [Wireframe.cc](https://wireframe.cc/)
 * [Lucid.app](https://lucid.app/)
 
-## For developers
+## For Developers
 Clone the source locally:
 ```
 $ git clone https://github.com/dfung003/PC-Manager-website
 $ cd pc-manager
 ```
 
-## How to use
+## Getting Started
 ![Alt text](public/assets/pc_manager_website.png "Title")
 * Once on the Home page, there is a navigation bar where you can view saved PC builds when pressing "Saved Builds", or you can view product reviews by pressing "Product Reviews"
 * Sign up with a username and password on the top-right corner
 * Once the account is created, log in with the same credentials and you will be able to save PC builds unique to that account/user
 * Additionally, you can browse recommended PC parts by clicking on any three of the buttons in the Browse Recommended Parts section
+
+## Next Steps
 * Click the Create Your PC Build to get started on making your very own PC build (with or without being logged in)
 
 ![Alt text](public/assets/create_build.png "Title")
@@ -49,7 +51,7 @@ $ cd pc-manager
 the functionality and appearance for my website
 * [Ice Cream Selector](https://seir-ice-creams.herokuapp.com/), used to recreate how
 buttons look with a background image and hover effect
-* Special thanks to Anthony R, Gerimae O, Ed T, James S, Roy D, Teo M, Wesley B for helping me put together this project
+* Special thanks to Anthony R, Gerimae O, Ed T, James S, Joshua M, Roy D, Teo M, Wesley B for helping me put together this project
 
 ## Resources
 * W3 Schools: [Horizontal Nav Bar](https://www.w3schools.com/css/css_navbar_horizontal.asp),
