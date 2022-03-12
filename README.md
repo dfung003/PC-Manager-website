@@ -48,6 +48,7 @@ $ cd pc-manager
 the functionality and appearance for my website
 * [Ice Cream Selector](https://seir-ice-creams.herokuapp.com/), used to recreate how
 buttons look with a background image and hover effect
+* Special thanks to Anthony R, Gerimae O, Ed T, James S, Roy D, Teo M, Wesley B for helping me put together this project
 
 ## Resources
 * W3 Schools: [Horizontal Nav Bar](https://www.w3schools.com/css/css_navbar_horizontal.asp),
