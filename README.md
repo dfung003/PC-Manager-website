@@ -22,14 +22,17 @@ for this project.
 
 ## How to use
 ![Alt text](public/assets/pc_manager_website.png "Title")
+<hr />
 * Once on the Home page, there is a navigation bar where you can view saved PC builds when pressing "Saved Builds", or you can view product reviews by pressing "Product Reviews"
 * Sign up with a username and password on the top-right corner
 * Once the account is created, log in with the same credentials and you will be able to save PC builds unique to that account/user
 * Additionally, you can browse recommended PC parts by clicking on any three of the buttons in the Browse Recommended Parts section
-* Click the Create Your PC Build to get started on making your very own PC build (with or without being logged in)
+* Click the Create Your PC Build to get started on making your very own PC build (with or without being logged in) <br />
 ![Alt text](public/assets/create_build.png "Title")
-* Fill out the form with your PC build name and PC specs and press Create Your New PC Build to submit the build into the database
+<hr />
+* Fill out the form with your PC build name and PC specs and press Create Your New PC Build to submit the build into the database <br />
 ![Alt text](public/assets/create_review.png "Title")
+<hr />
 * Navigate to Product Reviews in the navigation bar and press Add A New Product Review to begin reviewing a product
 
 ## For developers
