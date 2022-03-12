@@ -20,6 +20,13 @@ for this project.
 * [Wireframe.cc](https://wireframe.cc/)
 * [Lucid.app](https://lucid.app/)
 
+## For developers
+Clone the source locally:
+```
+$ git clone https://github.com/dfung003/PC-Manager-website
+$ cd pc-manager
+```
+
 ## How to use
 ![Alt text](public/assets/pc_manager_website.png "Title")
 * Once on the Home page, there is a navigation bar where you can view saved PC builds when pressing "Saved Builds", or you can view product reviews by pressing "Product Reviews"
@@ -31,17 +38,11 @@ for this project.
 ![Alt text](public/assets/create_build.png "Title")
 
 * Fill out the form with your PC build name and PC specs and press Create Your New PC Build to submit the build into the database
+* Navigate to Product Reviews in the navigation bar and press Add A New Product Review to begin reviewing a product
 
 ![Alt text](public/assets/create_review.png "Title")
 
-* Navigate to Product Reviews in the navigation bar and press Add A New Product Review to begin reviewing a product
-
-## For developers
-Clone the source locally:
-```
-$ git clone https://github.com/dfung003/PC-Manager-website
-$ cd pc-manager
-```
+* Fill out the form with your product review and press Create New Product Review to submit your review into the database
 
 ## Credits
 * [PCPartPicker](https://pcpartpicker.com), as my main source of inspiration on 
