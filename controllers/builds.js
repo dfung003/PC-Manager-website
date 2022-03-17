@@ -29,7 +29,7 @@ router.delete('/:id', (req, res) => {
     const { id } = req.params;
     Build.findByIdAndDelete(id)
         .then(() => {
-            res.redirect('/builds', { session: req.session });
+            res.redirect('/builds');
         })
         .catch((error) => {
             res.status(400).json({ error });
