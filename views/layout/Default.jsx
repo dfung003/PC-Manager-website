@@ -7,6 +7,10 @@ class DefaultLayout extends React.Component {
             <html>
                 <head>
                     <title>{this.props.title}</title>
+                    {/* <!-- GitHub Button --> */}
+                    <script async defer src="https://buttons.github.io/buttons.js"></script>
+                    {/* Font Awesome */}
+                    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
                     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossOrigin="anonymous" />
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
                     <link rel="stylesheet" href="/css/app.css" /> 
@@ -56,7 +60,15 @@ class DefaultLayout extends React.Component {
 
                             </div>
                         {this.props.children}
-                        <footer>Created By: Damon Fung</footer>
+                        <footer class="text-center">
+                            <div class="content">
+                                <p class="footer">Created By Damon Fung</p>
+                                <span style={{ fontSize: "150%" }}>
+                                    <a class="footer-btn" href="https://github.com/dfung003" target="_blank"><i class="fab fa-github-square"></i></a>
+                                    <a class="footer-btn" href="https://www.linkedin.com/in/damonfung27/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </span>
+                            </div>
+                        </footer>
 
                     </body>
             </html>

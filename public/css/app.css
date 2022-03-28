@@ -247,10 +247,31 @@ hr {
 }
 
 footer {
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
   background-color: #11111a;
   width: 100%;
   position: fixed;
   bottom: 0;
+}
+
+.content {
+  height: 50px;
+}
+
+.footer {
+  margin-bottom: -8px;
+}
+
+.footer-btn {
   text-align: center;
+  font-size: 25px;
+  padding-left: 3px !important;
+  padding-right: 3px !important;
+}
+
+.footer-btn:hover {
+  color: gray !important;
 }

@@ -59,7 +59,8 @@ buttons look with a background image and hover effect
 [HTML <input> size Attribute](https://www.w3schools.com/tags/att_input_size.asp)
 * Bootstrap v.4.6.1: [Primary Button](https://getbootstrap.com/docs/4.6/components/buttons/)
 * [Heroku Troubleshooting](https://wajeeh-ahsan.medium.com/heroku-missing-required-flag-a-bfc7ba0a00f5)
+* [GitHub Button](https://buttons.github.io/)
+* [LinkedIn Button](https://fontawesome.com/icons/linkedin?s=brands)
 * Wireframes: [1](https://wireframe.cc/aAeVu6), [2](https://wireframe.cc/nf3aPd), [3](https://wireframe.cc/cnuG3U), [4](https://wireframe.cc/UalGw2), [5](https://wireframe.cc/XOU0jQ)
 * [ERD](https://lucid.app/lucidchart/133ec2d8-f96a-4839-9b45-a2300c256998/edit?invitationId=inv_e7e70fa6-1a1e-471c-a738-53b6a01db45a)
-
 ![Alt text](public/assets/erd_pc.png "Title")
